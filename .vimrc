@@ -12,6 +12,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-dispatch'
+
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 
@@ -90,7 +92,6 @@ set expandtab
 
 " if hidden is not set, TextEdit might fail.
 set hidden
-
 " Some servers have issues with backup files, see #649
 set nobackup
 set nowritebackup
