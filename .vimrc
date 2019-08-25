@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-" Lets leard tmux a little better first
+" Lets learn tmux a little better first
 " Plug 'tpope/vim-dispatch'
 
 Plug 'jiangmiao/auto-pairs'
@@ -24,6 +24,7 @@ Plug 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
+let g:NerdTreeShowIgnoredStatus=1
 
 Plug 'editorconfig/editorconfig-vim'
 let gEditor_Config_exclude_patterns = ['fugitive://.*', 'scp://.*']
@@ -31,7 +32,7 @@ let gEditor_Config_exclude_patterns = ['fugitive://.*', 'scp://.*']
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'install --all' }
 Plug 'junegunn/fzf.vim'
 
-nnoremap <C-p> :Files<CR>
+nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>h :History<CR>
 
@@ -45,12 +46,31 @@ Plug 'neoclide/coc-css'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 Plug 'edkolev/tmuxline.vim'
+let g:tmuxline_preset = {
+    \'a': '#S',
+    \'x': '#(cat ~/.thyme-tmux)',
+    \'y': '%b %-d %Y', 
+    \'z': '%-I:%M %p',
+    \'win': '#W',
+    \'cwin': '#W',
+    \'options': { 'status-justify': 'left' } }
+
+Plug 'edkolev/promptline.vim'
+
 Plug 'dracula/vim', { 'as': 'dracula' }
 let g:dracula_italic = 0
 
 call plug#end()
+
+let g:promptline_preset = {
+    \'a' : [ promptline#slices#vcs_branch() ],
+    \'b' : [ promptline#slices#cwd() ],
+    \'options': {
+      \'left_sections' : [ 'b', 'a' ],
+      \'left_only_sections' : [ 'b', 'a' ] } }
 
 " }}}
 
@@ -91,6 +111,8 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+
+autocmd InsertEnter,InsertLeave * set cul!
 
 color dracula
 
@@ -138,6 +160,7 @@ nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
+" These don't seem to work in JavaScript, troubleshooting in spare time
 " nmap <silent> gd <Plug>(coc-definition)
 " nmap <silent> gy <Plug>(coc-type-definition)
 " nmap <silent> gi <Plug>(coc-implementation)
