@@ -1,0 +1,14 @@
+# Ignore everything by default
+*
+
+!.gitignore
+!.vimrc
+!.bashrc
+!.bash_profile
+!.promptlinerc
+!.editorconfig
+!.npmrc
+!.tmux.conf
+!.config/nvim/init.vim
+!.config/nvim/coc-settings.json
+!.config/coc/extensions/package.json
