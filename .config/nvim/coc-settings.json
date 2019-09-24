@@ -1,0 +1,12 @@
+{
+  "eslint.autoFixOnSave": true,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.level":"warning",
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextPrefix": "// ",
+  "diagnostic.virtualTextLines": 5,
+  "codeLens.enable": true,
+  "git.enableGutters": true,
+  "coc.preferences.formatOnType": true,
+  "emmet.includeLanguages": { "javascript": "javascriptreact" } 
+}
