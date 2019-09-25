@@ -38,10 +38,6 @@ nnoremap <Leader>h :History<CR>
 
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
-Plug 'neoclide/coc-json'
-Plug 'neoclide/coc-tsserver'
-Plug 'neoclide/coc-css'
-" Plug 'neoclide/coc-eslint'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -62,12 +58,13 @@ let g:tmuxline_preset = {
     \'options': { 'status-justify': 'left' } }
 
 Plug 'edkolev/promptline.vim'
-let g:promptline_preset = {
-    \'a' : [ promptline#slices#vcs_branch() ],
-    \'b' : [ promptline#slices#cwd() ],
-    \'options': {
-      \'left_sections' : [ 'b', 'a' ],
-      \'left_only_sections' : [ 'b', 'a' ] } }
+" Let's fix this later
+" let g:promptline_preset = {
+    " \'a' : [ promptline#slices#vcs_branch() ],
+    " \'b' : [ promptline#slices#cwd() ],
+    " \'options': {
+      " \'left_sections' : [ 'b', 'a' ],
+      " \'left_only_sections' : [ 'b', 'a' ] } }
 
 call plug#end()
 
