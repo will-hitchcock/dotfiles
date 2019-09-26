@@ -7,6 +7,7 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export VISUAL=nvim
 export EDITOR=nvim
+export GIT_REVIEW_BASE=master
 
 # export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 export FZF_DEFAULT_COMMAND='ag -g""'

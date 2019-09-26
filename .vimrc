@@ -12,14 +12,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
 " Lets learn tmux a little better first
 " Plug 'tpope/vim-dispatch'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdtree-git-plugin'
 Plug 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
@@ -107,6 +106,12 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+
+set mouse=c
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 autocmd InsertEnter,InsertLeave * set cul!
 
