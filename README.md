@@ -1,5 +1,7 @@
 # dotfiles
 
+This is a safe space, don't judge me.
+
 I should write a script that does all of this somehow. Maybe just use someone elses 🤷‍♂️
 The setup script will delete all your config files and replace them with symlinks, be careful.
 
