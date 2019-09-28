@@ -23,7 +23,6 @@ Plug 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
-let g:NerdTreeShowIgnoredStatus=1
 
 Plug 'editorconfig/editorconfig-vim'
 let gEditor_Config_exclude_patterns = ['fugitive://.*', 'scp://.*']
@@ -106,6 +105,8 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+
+set clipboard=unnamed
 
 set mouse=c
 noremap <Up> <Nop>
