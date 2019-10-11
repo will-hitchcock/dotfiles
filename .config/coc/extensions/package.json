@@ -1,17 +1,17 @@
 {
   "dependencies": {
     "coc-eslint": ">=1.2.2",
-    "coc-git": ">=1.6.10",
+    "coc-git": ">=1.6.13",
     "coc-snippets": ">=2.1.11",
     "coc-json": ">=1.2.3",
     "coc-css": ">=1.2.2",
-    "coc-lists": ">=1.3.3",
-    "coc-emmet": ">=1.1.3",
+    "coc-lists": ">=1.3.4",
     "coc-highlight": ">=1.2.5",
     "coc-yaml": ">=1.0.2",
     "coc-jest": ">=1.0.3",
     "ReactSnippets": "https://github.com/xabikos/vscode-react",
     "JavaScriptSnippets": "https://github.com/xabikos/vscode-javascript",
-    "coc-tsserver": ">=1.4.1"
+    "coc-tsserver": ">=1.4.4",
+    "coc-styled-components": ">=0.2.0"
   }
 }
