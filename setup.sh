@@ -1,6 +1,7 @@
 declare -a FILES_TO_SYMLINK=(
   '.vimrc'
   '.bashrc'
+  '.zshrc'
   '.bash_profile'
   '.editorconfig'
   '.promptlinerc'

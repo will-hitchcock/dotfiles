@@ -17,7 +17,6 @@ Plug 'tpope/vim-vinegar'
 " Plug 'tpope/vim-dispatch'
 
 Plug 'jiangmiao/auto-pairs'
-Plug 'mattn/emmet-vim'
 
 Plug 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
@@ -29,6 +28,20 @@ let gEditor_Config_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'install --all' }
 Plug 'junegunn/fzf.vim'
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
 nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>b :Buffers<CR>
@@ -82,7 +95,8 @@ set ignorecase
 set smartcase
 
 set scrolloff=3
-set cmdheight=2
+set cmdheight=1
+set shortmess=a
 set number
 set signcolumn=yes
 
@@ -91,6 +105,7 @@ set laststatus=2
 set background=light
 set t_Co=256
 set noshowmode
+set termguicolors
 
 set splitright
 set splitbelow
@@ -123,9 +138,6 @@ set hidden
 " Some servers have issues with backup files, see #649
 set nobackup
 set nowritebackup
-
-" Better display for messages
-set cmdheight=2
 
 " You will have bad experience for diagnostic messages when it's default 4000.
 set updatetime=300

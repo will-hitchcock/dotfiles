@@ -1,4 +1,4 @@
-export PATH=$PATH:'~/.npm-global/bin'
+export PATH=$PATH:'~/.npm-global/bin:~/Library/Python/3.7/bin/'
 
 source ~/.promptlinerc
 
@@ -10,7 +10,7 @@ export EDITOR=nvim
 export GIT_REVIEW_BASE=master
 
 # export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
-export FZF_DEFAULT_COMMAND='ag -g""'
+# export FZF_DEFAULT_COMMAND='ag -g""'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 gitPrune() {
