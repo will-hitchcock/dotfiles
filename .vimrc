@@ -15,6 +15,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 " Lets learn tmux a little better first
 " Plug 'tpope/vim-dispatch'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'jiangmiao/auto-pairs'
 

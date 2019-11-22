@@ -4,6 +4,7 @@
 !.gitignore
 !.vimrc
 !.bashrc
+!.zshrc
 !.bash_profile
 !.promptlinerc
 !.editorconfig
