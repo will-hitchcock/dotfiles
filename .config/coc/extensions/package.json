@@ -10,6 +10,7 @@
     "coc-jest": ">=1.0.3",
     "ReactSnippets": "https://github.com/xabikos/vscode-react",
     "JavaScriptSnippets": "https://github.com/xabikos/vscode-javascript",
-    "coc-git": ">=1.6.16"
+    "coc-git": ">=1.6.16",
+    "coc-tsserver": ">=1.4.9"
   }
 }

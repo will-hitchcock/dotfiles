@@ -6,6 +6,5 @@
   "diagnostic.virtualTextLines": 5,
   "codeLens.enable": true,
   "git.enableGutters": true,
-  "coc.preferences.formatOnType": true,
-  "emmet.includeLanguages": { "javascript": "javascriptreact" } 
+  "coc.preferences.formatOnType": true
 }
