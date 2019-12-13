@@ -1,4 +1,7 @@
-export PATH=$PATH:'~/.npm-global/bin:~/Library/Python/3.7/bin/'
+path+=~/.npm-global/bin/
+path+=~/Library/Python/3.7/bin/
+export PATH 
+export LANG=en_US.UTF-8
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -30,12 +33,9 @@ listprs() {
   hub sync && hub pr list --format "%pC%>(8)%i%Creset %t% l (%as) %n" --color="always" | cgrep "Ready For Review" | cgrep wlhtck
 }
 
-showpr() {
-  hub pr show --format "%b" $1
-}
 
 showpr() {
-  hub pr show --format "%pC%i%Creset %t% l%n%n%b"
+  hub pr show --format "%pC%i%Creset %t% l%n%n%b" --color="always" | msee
   hub ci-status -v
 }
 

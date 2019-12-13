@@ -29,20 +29,20 @@ let gEditor_Config_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'install --all' }
 Plug 'junegunn/fzf.vim'
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+" let g:fzf_colors =
+" \ { 'fg':      ['fg', 'Normal'],
+  " \ 'bg':      ['bg', 'Normal'],
+  " \ 'hl':      ['fg', 'Comment'],
+  " \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  " \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  " \ 'hl+':     ['fg', 'Statement'],
+  " \ 'info':    ['fg', 'PreProc'],
+  " \ 'border':  ['fg', 'Ignore'],
+  " \ 'prompt':  ['fg', 'Conditional'],
+  " \ 'pointer': ['fg', 'Exception'],
+  " \ 'marker':  ['fg', 'Keyword'],
+  " \ 'spinner': ['fg', 'Label'],
+  " \ 'header':  ['fg', 'Comment'] }
 
 nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>b :Buffers<CR>
@@ -59,17 +59,16 @@ let g:airline#extensions#tabline#enabled = 1
 Plug 'dracula/vim', { 'as': 'dracula' }
 let g:dracula_italic = 0
 
-Plug 'edkolev/tmuxline.vim'
-let g:tmuxline_preset = {
-    \'a': '#S',
-    \'x': '#(cat ~/.thyme-tmux)',
-    \'y': '%b %-d %Y', 
-    \'z': '%-I:%M %p',
-    \'win': '#I #W',
-    \'cwin': '#I #W',
-    \'options': { 'status-justify': 'left' } }
+" Plug 'edkolev/tmuxline.vim'
+" let g:tmuxline_preset = {
+    " \'a': '#S',
+    " \'y': '%b %-d %Y', 
+    " \'z': '%-I:%M %p',
+    " \'win': '#I #W',
+    " \'cwin': '#I #W',
+    " \'options': { 'status-justify': 'left' } }
 
-Plug 'edkolev/promptline.vim'
+" Plug 'edkolev/promptline.vim'
 " Let's fix this later
 " let g:promptline_preset = {
     " \'a' : [ promptline#slices#vcs_branch() ],
@@ -148,6 +147,11 @@ set shortmess+=c
 
 " always show signcolumns
 set signcolumn=yes
+
+augroup javascript_folding
+    au!
+    au FileType javascript setlocal foldmethod=syntax
+augroup END
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 " Use tab for trigger completion with characters ahead and navigate.
