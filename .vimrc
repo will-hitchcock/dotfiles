@@ -129,6 +129,8 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+set path=.,server/frontend
+
 autocmd InsertEnter,InsertLeave * set cul!
 
 color dracula
@@ -147,11 +149,6 @@ set shortmess+=c
 
 " always show signcolumns
 set signcolumn=yes
-
-augroup javascript_folding
-    au!
-    au FileType javascript setlocal foldmethod=syntax
-augroup END
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 " Use tab for trigger completion with characters ahead and navigate.
