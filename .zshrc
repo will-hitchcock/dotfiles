@@ -20,6 +20,7 @@ export VISUAL=nvim
 export EDITOR=nvim
 export GIT_REVIEW_BASE=develop
 alias cgrep="grep --color=auto"
+alias unlockkeychain="security unlock-keychain ~/Library/Keychains/login.keychain-db"
 # export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 # export FZF_DEFAULT_COMMAND='ag -g""'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

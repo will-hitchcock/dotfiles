@@ -129,6 +129,8 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+set path=.,server/frontend
+
 autocmd InsertEnter,InsertLeave * set cul!
 
 color dracula
