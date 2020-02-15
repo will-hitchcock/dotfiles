@@ -148,6 +148,8 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
+nmap <silent> <leader>s :set spell! <CR>
+
 augroup javascript_folding
     au!
     au FileType javascript setlocal foldmethod=syntax
