@@ -40,6 +40,10 @@ showpr() {
   hub ci-status -v
 }
 
+openpr() {
+  hub pull-request -b develop -l "Ready for Review"
+}
+
 # source the private bash config if it exists, this one doesn't go in source control
 BASH_PRIVATE=~/.bash_private && test -f $BASH_PRIVATE && source $BASH_PRIVATE
 

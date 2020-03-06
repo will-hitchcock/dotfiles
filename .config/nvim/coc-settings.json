@@ -5,6 +5,5 @@
   "diagnostic.virtualTextPrefix": "// ",
   "diagnostic.virtualTextLines": 5,
   "codeLens.enable": true,
-  "git.enableGutters": true,
-  "coc.preferences.formatOnType": true
+  "git.enableGutters": true
 }
