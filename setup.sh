@@ -8,8 +8,8 @@ declare -a FILES_TO_SYMLINK=(
   '.tmux.conf'
   '.config/nvim/init.vim'
   '.config/nvim/coc-settings.json'
-  '.config/coc/extensions/package.json'
-  
+  '.config/coc/extensions/package.json',
+  '.hyper.js' 
 )
 
 for i in "${FILES_TO_SYMLINK[@]}"; do

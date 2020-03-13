@@ -56,7 +56,6 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 Plug 'dracula/vim', { 'as': 'dracula' }
-let g:dracula_italic = 0
 
 " Plug 'edkolev/tmuxline.vim'
 " let g:tmuxline_preset = {

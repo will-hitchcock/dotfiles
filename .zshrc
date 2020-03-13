@@ -44,6 +44,9 @@ openpr() {
   hub pull-request -b develop -l "Ready for Review"
 }
 
+openhotfix() {
+  hub pull-request -b master -l "Ready for Review","Hotfix"
+}
 # source the private bash config if it exists, this one doesn't go in source control
 BASH_PRIVATE=~/.bash_private && test -f $BASH_PRIVATE && source $BASH_PRIVATE
 
