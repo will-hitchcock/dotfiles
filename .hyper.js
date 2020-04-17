@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: ' "Fira Code", monospace',
+    fontFamily: '"Dank Mono", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -46,7 +46,7 @@ module.exports = {
     backgroundColor: '#000',
 
     // terminal selection color
-    selectionColor: 'rgba(248,28,229,0.3)',
+    selectionColor:  'rgba(58,50,100,0.8)',
 
     // border color (window, tabs)
     borderColor: '#333',
@@ -148,9 +148,9 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     "hyper-dracula",
-    "hyper-ligatures",
     "hyper-font-ligatures",
-    "hyper-hide-scroll"
+    "hyper-hide-scroll",
+    "hypernasa"
   ],
 
   // in development, you can create a directory under

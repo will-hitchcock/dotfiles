@@ -14,8 +14,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 
-Plug 'airblade/vim-gitgutter'
-
+" Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'scrooloose/nerdcommenter'
@@ -26,28 +25,15 @@ let g:NERDDefaultAlign = 'left'
 Plug 'editorconfig/editorconfig-vim'
 let gEditor_Config_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'install --all' }
+Plug 'junegunn/fzf', { 'do': './install --bin'  }
 Plug 'junegunn/fzf.vim'
-" let g:fzf_colors =
-" \ { 'fg':      ['fg', 'Normal'],
-  " \ 'bg':      ['bg', 'Normal'],
-  " \ 'hl':      ['fg', 'Comment'],
-  " \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  " \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  " \ 'hl+':     ['fg', 'Statement'],
-  " \ 'info':    ['fg', 'PreProc'],
-  " \ 'border':  ['fg', 'Ignore'],
-  " \ 'prompt':  ['fg', 'Conditional'],
-  " \ 'pointer': ['fg', 'Exception'],
-  " \ 'marker':  ['fg', 'Keyword'],
-  " \ 'spinner': ['fg', 'Label'],
-  " \ 'header':  ['fg', 'Comment'] }
 
 nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>h :History<CR>
 
 Plug 'sheerun/vim-polyglot'
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main'  }
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 
 Plug 'vim-airline/vim-airline'
@@ -132,6 +118,7 @@ set path=.,server/frontend
 autocmd InsertEnter,InsertLeave * set cul!
 
 color dracula
+hi Normal guibg=NONE ctermbg=NONE
 
 " if hidden is not set, TextEdit might fail.
 set hidden
@@ -182,10 +169,10 @@ nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
 " These don't seem to work in JavaScript, troubleshooting in spare time
-" nmap <silent> gd <Plug>(coc-definition)
-" nmap <silent> gy <Plug>(coc-type-definition)
-" nmap <silent> gi <Plug>(coc-implementation)
-" nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
