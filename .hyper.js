@@ -135,7 +135,7 @@ module.exports = {
 
     // Whether to use the WebGL renderer. Set it to false to use canvas-based
     // rendering (slower, but supports transparent backgrounds)
-    webGLRenderer: false,
+    webGLRenderer: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
   },
@@ -149,8 +149,7 @@ module.exports = {
   plugins: [
     "hyper-dracula",
     "hyper-font-ligatures",
-    "hyper-hide-scroll",
-    "hypernasa"
+    "hyper-hide-scroll"
   ],
 
   // in development, you can create a directory under
