@@ -8,9 +8,19 @@ declare -a FILES_TO_SYMLINK=(
   '.tmux.conf'
   '.config/nvim/init.vim'
   '.config/nvim/coc-settings.json'
-  '.config/coc/extensions/package.json',
-  '.hyper.js' 
+  '.config/coc/extensions/package.json'
+  '.p10k.zsh'
 )
+
+declare -a DIRECTORIES_TO_CREATE=(
+  '.config/nvim'
+  '.config/coc/extensions'
+)
+
+for i in "${DIRECTORIES_TO_CREATE}"; do
+  echo "Creating prerequisite directory: ~/$i"
+  mkdir -p ~/$i
+done
 
 for i in "${FILES_TO_SYMLINK[@]}"; do
   if test -f ~/$i; then
@@ -20,12 +30,4 @@ for i in "${FILES_TO_SYMLINK[@]}"; do
 
   echo "Creating symlink ~/$i --> $(pwd)/$i"
   ln -s $(pwd)/$i ~/$i
-  # sourceFile="$(pwd)/$i"
-  # targetFile="$HOME/.$(printf "%s" "$i" | sed "s/.*\/\(.*\)/\1/g")"
-
-  # if [[ $BUILD ]]; then
-    # link_file $sourceFile $targetFile
-  # else
-    # unlink_file $sourceFile $targetFile
-  # fi
 done

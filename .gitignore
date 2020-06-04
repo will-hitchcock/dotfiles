@@ -1,6 +1,5 @@
 # Ignore everything by default
 *
-!.hyper.js
 !.gitignore
 !.vimrc
 !.bashrc
@@ -14,3 +13,4 @@
 !.config/nvim/coc-settings.json
 !.config/coc/extensions/package.json
 !setup.sh
+!.p10k.zsh

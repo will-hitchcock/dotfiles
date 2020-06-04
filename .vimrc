@@ -13,14 +13,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-repeat'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tmux-plugins/vim-tmux'
 
 " Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
-
-Plug 'scrooloose/nerdcommenter'
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:NERDDefaultAlign = 'left'
 
 Plug 'editorconfig/editorconfig-vim'
 let gEditor_Config_exclude_patterns = ['fugitive://.*', 'scp://.*']
@@ -38,28 +38,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='dracula'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 Plug 'dracula/vim', { 'as': 'dracula' }
-
-" Plug 'edkolev/tmuxline.vim'
-" let g:tmuxline_preset = {
-    " \'a': '#S',
-    " \'y': '%b %-d %Y', 
-    " \'z': '%-I:%M %p',
-    " \'win': '#I #W',
-    " \'cwin': '#I #W',
-    " \'options': { 'status-justify': 'left' } }
-
-" Plug 'edkolev/promptline.vim'
-" Let's fix this later
-" let g:promptline_preset = {
-    " \'a' : [ promptline#slices#vcs_branch() ],
-    " \'b' : [ promptline#slices#cwd() ],
-    " \'options': {
-      " \'left_sections' : [ 'b', 'a' ],
-      " \'left_only_sections' : [ 'b', 'a' ] } }
 
 call plug#end()
 
@@ -68,6 +51,7 @@ call plug#end()
 " Settings {{{
 syntax on
 
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 set nocompatible
 
 set hidden
@@ -82,7 +66,14 @@ set scrolloff=3
 set cmdheight=1
 set shortmess=a
 set number
+set rnu
 set signcolumn=yes
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+augroup END
 
 " Always show statusline
 set laststatus=2
@@ -136,11 +127,6 @@ set shortmess+=c
 set signcolumn=yes
 
 nmap <silent> <leader>s :set spell! <CR>
-
-augroup javascript_folding
-    au!
-    au FileType javascript setlocal foldmethod=syntax
-augroup END
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 " Use tab for trigger completion with characters ahead and navigate.
