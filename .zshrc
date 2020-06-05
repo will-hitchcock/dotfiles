@@ -38,6 +38,7 @@ BASH_PRIVATE=~/.bash_private && test -f $BASH_PRIVATE && source $BASH_PRIVATE
 export ZSH="$HOME/.oh-my-zsh"
 
 export ZSH_THEME="powerlevel10k/powerlevel10k"
+typeset -g POWERLEVEL9k_INSTANT_PROMPT=off
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
