@@ -10,6 +10,7 @@ declare -a FILES_TO_SYMLINK=(
   '.config/nvim/coc-settings.json'
   '.config/coc/extensions/package.json'
   '.p10k.zsh'
+  '.gitconfig'
 )
 
 declare -a DIRECTORIES_TO_CREATE=(
