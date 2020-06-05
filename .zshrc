@@ -19,7 +19,6 @@ plugins=(
   hub
 )
 
-
 # Add colors to Terminal
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
@@ -31,25 +30,6 @@ alias unlockkeychain="security unlock-keychain ~/Library/Keychains/login.keychai
 # export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 # export FZF_DEFAULT_COMMAND='ag -g""'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-gitPrune() {
-    git branch --merged master | grep -v master | xargs -n 1 git branch -d
-    git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
-}
-
-listprs() {
-  hub sync && hub pr list --format "%pC%>(8)%i%Creset %t% l (%as) %n" --color="always" | cgrep wlhtck
-}
-
-
-showpr() {
-  hub pr show --format "%pC%i%Creset %t% l%n%n%b" --color="always" | msee
-  hub ci-status -v
-}
-
-openpr() {
-  hub pull-request
-}
 
 # source the private bash config if it exists, this one doesn't go in source control
 BASH_PRIVATE=~/.bash_private && test -f $BASH_PRIVATE && source $BASH_PRIVATE
