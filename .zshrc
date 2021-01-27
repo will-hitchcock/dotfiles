@@ -39,6 +39,11 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 typeset -g POWERLEVEL9k_INSTANT_PROMPT=off
+
+gitPrune() {
+    git branch --merged master | grep -v master | xargs -n 1 git branch -d
+    git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
+}
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME

@@ -16,6 +16,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-obsession'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tmux-plugins/vim-tmux'
 
@@ -68,6 +69,10 @@ set shortmess=a
 set number
 set rnu
 set signcolumn=yes
+
+set wrap
+set linebreak
+set nolist
 
 augroup numbertoggle
   autocmd!

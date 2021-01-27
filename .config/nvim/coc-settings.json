@@ -6,5 +6,5 @@
   "diagnostic.virtualTextPrefix": "// ",
   "diagnostic.virtualTextLines": 5,
   "codeLens.enable": true,
-  "git.enableGutters": true
+  "git.enableGutters": false
 }
