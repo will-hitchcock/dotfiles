@@ -16,6 +16,6 @@ brew install neovim tmux node github/gh/gh
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-git clone https://github.com/will-hitchcock/dotfiles.git
+git clone https://github.com/wlhtck/dotfiles.git
 ./setup.sh
 ```
