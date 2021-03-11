@@ -31,6 +31,10 @@ alias unlockkeychain="security unlock-keychain ~/Library/Keychains/login.keychai
 # export FZF_DEFAULT_COMMAND='ag -g""'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # source the private bash config if it exists, this one doesn't go in source control
 BASH_PRIVATE=~/.bash_private && test -f $BASH_PRIVATE && source $BASH_PRIVATE
 
