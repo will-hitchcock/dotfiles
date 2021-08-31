@@ -11,6 +11,8 @@
   # Same as above, but with a diff stat instead of just names
   # (better for interactive use)
   stat = !git diff --stat $(git merge-base HEAD \"$GIT_REVIEW_BASE\")
+[merge]
+  conflictStyle = diff3
 [alias]
   # NOTE: These aliases depend on the `git files` alias from
   # a few sections ago!
