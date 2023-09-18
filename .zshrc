@@ -9,6 +9,7 @@ path+=~/.npm-global/bin/
 path+=~/Library/Python/3.7/bin/
 export PATH 
 export LANG=en_US.UTF-8
+# export PYTHON=~/Library/Python/3.7/bin/
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -148,3 +149,8 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+# export ANDROID_HOME=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/platform-tools

@@ -1,5 +1,5 @@
 [credential]
-	helper = osxkeychain
+	helper = manager-core
 [user]
 	name = wlhtck
 	email = will@wlhtck.io
@@ -26,3 +26,5 @@
   # instead of opening all files:
   # git reviewone foo.js bar.js
   reviewone = !nvim -p +\"tabdo Gdiff $GIT_REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$GIT_REVIEW_BASE'\"
+[pull]
+	rebase = false
